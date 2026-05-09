@@ -1,0 +1,83 @@
+#include <stdio.h>
+
+int main() {
+    int at[20], bt[20], ct[20], wt[20], tat[20], rt[20], start[20];
+    int i, n, done[20] = {0};
+
+    int completed = 0, currenttime = 0;
+
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+
+    printf("Enter arrival time of all processes:");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &at[i]);
+    }
+
+    printf("Enter burst time of all processes:");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &bt[i]);
+    }
+
+    while(completed < n) {
+
+        int p = -1;
+
+        // shortest job find with arrival time
+        for(i = 0; i < n; i++) {
+
+            if(at[i] <= currenttime && !done[i]) {
+
+                if(p == -1 || bt[i] < bt[p]) {
+                    p = i;
+                }
+            }
+        }
+
+        // if no process has arrived
+        if(p == -1) {
+            currenttime++;
+            continue;
+        }
+
+        start[p] = currenttime;
+
+        ct[p] = start[p] + bt[p];
+
+        tat[p] = ct[p] - at[p];
+
+        wt[p] = tat[p] - bt[p];
+
+        rt[p] = start[p] - at[p];
+
+        done[p] = 1;
+
+        completed++;
+
+        currenttime = ct[p];
+    }
+
+    float totalwt = 0, totaltat = 0;
+
+    printf("\nPNo.\tAT\tBT\tCT\tTAT\tWT\n");
+
+    for(i = 0; i < n; i++) {
+
+        printf("P%d\t\t%d\t%d\t%d\t%d\t%d\n",
+               i + 1,
+               at[i],
+               bt[i],
+               ct[i],
+               tat[i],
+               wt[i]);
+
+        totalwt += wt[i];
+        totaltat += tat[i];
+    }
+
+    printf("\nAvg waiting time = %.2f\n", totalwt / n);
+
+    printf("Avg turnaround time = %.2f\n", totaltat / n);
+
+    return 0;
+}
