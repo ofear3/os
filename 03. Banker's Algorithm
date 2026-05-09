@@ -62,3 +62,27 @@ int main() {
 
     return 0;
 }
+
+
+
+//RESULT:::::::::::
+
+Enter number of processes: 4
+Enter number of resources: 3
+Enter Allocation Matrix:
+4 5 6
+2 3 3
+5 4 2
+2 4 3
+Enter Maximum Matrix:
+6 6 8
+4 5 5
+6 5 5
+3 7 5
+Enter Available Resources:
+3 2 3
+System is in a safe state.
+Safe sequence is: P0 P1 P2 P3 
+
+
+=== Code Execution Successful ===
