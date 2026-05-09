@@ -51,3 +51,30 @@ int main() {
 
     return 0;
 }
+
+
+//RESULT::::::::::::
+
+Enter number of pages: 12
+Enter the page reference string: 7 0 1 2 0 3 0 4 2 3 0 3
+Enter number of frames: 2
+Page	Frames
+7		7 - 
+0		7 	0 
+1		1 	0 
+2		1 	2 
+0		0 	2 
+3		0 	3 
+0		0 	3 
+4		4 	3 
+2		4 	2 
+3		3 	2 
+0		3 	0 
+3		3 	0 
+
+Total Page Faults = 10
+
+Total Page Hits = 2
+
+
+=== Code Execution Successful ===
