@@ -67,3 +67,31 @@ int main() {
     printf("\nTotal Page Hits = %d\n", n-faults);
     return 0;
 }
+
+
+//RESULT::::::
+
+Enter number of pages: 12
+Enter page reference string: 7 0 1 2 0 3 0 4 2 3 0 3 
+Enter number of frames: 2
+
+Page	Frames
+7		- 7 
+0		0 7 
+1		0 1 
+2		0 2 
+0		0 2 
+3		0 3 
+0		0 3 
+4		4 3 
+2		2 3 
+3		2 3 
+0		0 3 
+3		0 3 
+
+Total Page Faults = 8
+
+Total Page Hits = 4
+
+
+=== Code Execution Successful ===
