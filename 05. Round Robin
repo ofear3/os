@@ -50,3 +50,22 @@ int main() {
 
     return 0;
 }
+
+
+//RESULT::::::::::::
+
+Enter number of processes: 4
+Enter burst times for all processes:5 4 3 2 
+Enter time quantum: 2
+
+PNo.	AT	BT	CT	TAT	WT
+P1		5	14	14	9	9
+P2		4	12	12	8	9
+P3		3	13	13	10	9
+P4		2	8	8	6	9
+
+Average TAT = 11.75
+Average WT = 8.25
+
+
+=== Code Execution Successful ===
