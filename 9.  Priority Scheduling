@@ -56,3 +56,26 @@ int main()
     return 0;
 
 }
+
+
+//RESULT::::::::::::
+
+Enter the number of process:4
+Enter burst time and priority for process 1:2 3
+Enter burst time and priority for process 2:3 2
+Enter burst time and priority for process 3:5 1
+Enter burst time and priority for process 4:2 4
+
+
+PID	BT	PRIORITY	CT	TAT	WT
+1	2		3		10	10	8
+2	3		2		8	8	5
+3	5		1		5	5	0
+4	2		4		12	12	10
+
+
+Average TAT = 8.75
+Average WT = 5.75
+
+
+=== Code Execution Successful ===
