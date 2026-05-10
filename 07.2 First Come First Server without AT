@@ -50,3 +50,21 @@ printf("Avg turn around time = %.2f\n", totaltat/n);
 
 return 0;
 }
+
+//RESULT::::::::::::
+
+Enter the number of process:4
+Enter burst time of all the processes:2 1 3 4
+
+PNo.	BT	CT	TAT	WT
+p1		2	2	2	0
+p2		1	3	3	2
+p3		3	6	6	3
+p4		4	10	10	6
+
+
+Avg waiting time = 2.75
+Avg turn around time = 5.25
+
+
+=== Code Execution Successful ===
