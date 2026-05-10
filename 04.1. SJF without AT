@@ -46,3 +46,21 @@ int main() {
 
     return 0;
 }
+
+
+//RESULT::::::::::::
+
+Enter the number of processes: 4
+Enter burst time of all the processes:3 2 1 2
+
+PNo.	BT	CT	TAT	WT
+p1		3	8	8	5
+p2		2	3	3	1
+p3		1	1	1	0
+p4		2	5	5	3
+
+Avg waiting time = 2.25
+Avg turn around time = 4.25
+
+
+=== Code Execution Successful ===
